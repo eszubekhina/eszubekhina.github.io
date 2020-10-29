@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.greeting {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(img/desktop-2530405_1920.jpg);    
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items:center;
+    align-items: center;
+}
+
+.greeting.active {
+   -webkit-transform:translateX(-400px) ;
+   -ms-transform: translateX(-400px);
+   -o-transform: translateX(-400px);
+   transform: translateX(-400px);
+}
+
+.overlay {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    opacity: .4;
+}
+
+header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 100px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+header .logo {
+    color: #fff;
+    font-size:26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header #toggle {
+    position: relative;
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+}
+
+header #toggle:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+header #toggle:after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+} 
+
+.greeting.active header #toggle:before {
+    border: none;
+}
+
+#navigation {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: rgb(135, 165, 80);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items:center;
+    align-items: center; 
+}
+
+#navigation.active {
+    right: 0;
+}
+
+#navigation ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#navigation ul li {
+    list-style-type: none;
+}
+
+#navigation ul li a {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#navigation ul li a:hover {
+    background-color: #fff;
+    color: rgb(15, 102, 30);
+}
+
+.home-content {
+    position: relative;
+    z-index: 1;
+}
+
+.home-content h1 {
+    color:#fff;
+    font-size: 42px;
+}
+
+.home-content h1 span {
+    color:rgb(26, 126, 44);
+}
+
+.logo span {
+    color: rgb(18, 231, 53);
+}
+
+.home-content a {
+    display: inline-block;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 25px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.home-content a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.soc-icons {
+    position: absolute;
+    right: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.soc-icons li {
+    list-style-type: none;
+}
+
+.soc-icons li a {
+    display: inline-block;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #fff;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.soc-icons li a:hover {
+    -webkit-transform: scale(1,4);
+    -ms-transform: scale(1,4);
+    -o-transform: scale(2,4);
+    transform: scale(3,4);
+}
+
+/*2 блок Обо мне*/
+
+.img-portfolio{
+    display: inline-block;
+    border-radius: 50px;
+    width: 30%;
+    overflow: hidden;
+}
+
+.about-info {
+    padding: 40px 0;
+    background-color: rgb(246, 248, 243);
+}
+
+/*.box-about-back {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: -100px;
+}*/
+
+.about-me-title {
+    color: rgb(15, 102, 30);
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.border {
+    width: 1000px;
+    border-bottom: 1px solid rgb(12, 11, 11);
+    margin: 0 auto 60px;
+    border-radius: 5px;
+    max-width: 90%;
+}
+
+.about-me {
+    width: 780px;
+    padding: 56px 56px;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    left: 40px;
+    top: 90px;
+}
+
+.about-me-text {
+    color:rgb(87, 79, 79);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: justify;
+    text-indent: 1.5em; 
+}
+
+/*3 блок портфолио*/
+
+.portfolio {
+    background-color: rgb(224, 231, 214);
+    padding: 40px 0;
+}
+
+.portfolio-item {
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+    transition: all 0.9s ease;
+}
+
+.portfolio-item img {
+    border-radius: 10px;
+}
+
+/*.portfolio-item1 {
+    border-radius: 50px;
+}*/
+
+.portfolio-items {
+    display: flex;
+    margin-top: 50px;
+    font-size: 0;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.portfolio-item:hover{
+    transform: scale(1.5);
+}
+
+/*4 блок Умение и навыки*/
+
+.skills-education{
+    background-image: url(img/nb3.jpg);
+    background-repeat: no-repeat ;
+    padding: 50px;
+    background-size: cover;   
+}
+
+.education {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-education {
+   display: block;
+   width: 50%; 
+   box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+   padding: 56px 56px;
+}
+
+.right-education {
+    display: block;
+    width: 50%; 
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    padding: 56px 56px;  
+}
+
+.skill-title {
+    display: block;
+    color: rgb(25, 156, 91);
+    margin-bottom: 10px;
+    text-align: center; 
+}
+
+p.about-me-text a {
+    text-decoration: none;
+    color: rgb(14, 179, 22);
+}
+
+.link-site-learn:hover {
+    color: rgb(25, 156, 91);
+}
+
+/*5 блок Сертификаты*/
+
+.certificates {
+    background-color: rgb(246, 248, 243);
+    padding: 40px 0;
+}
+
+.certificates_gb {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.certificates_gb img {
+    width: 30%;
+}
+
+.certificates-text p {
+    text-align: center;
+}
+
+/*6 блок Контакты footer*/
+
+.footer-blok {
+    background-color: rgb(135, 165, 80);
+    text-align: center;  
+}
+
+.soc-icons-footer li {
+    list-style-type: none;
+    display: inline-flex;
+    margin-left: 15px;
+}
+
+.soc-icons-footer li a {
+    display: inline-block;
+    padding: 15px 0;
+    font-size: 20px;
+    color: #fff;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.soc-icons-footer li a:hover {
+    -webkit-transform: scale(1,4);
+    -ms-transform: scale(1,4);
+    -o-transform: scale(2,4);
+    transform: scale(3,4);
+}
+
+
+.footer-text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold; 
+    padding-top: 35px;  
+    padding-bottom: 25px;
+}
+
+.footer-contacts {
+    color: rgb(239, 241, 233);
+    font-weight: bold;
+}
+
+.footer-contacts  .contact-mail, .contact-phone,
+.contact-skype {
+    color: rgb(34, 92, 28);
+}
+
+.footer-link {
+   display: inline-block;
+   border: 2px solid #fff;
+   color: #fff;
+   font-weight: bold;
+   text-decoration: none;
+   text-transform: uppercase;
+   margin-top: 25px;
+   padding: 15px 30px;
+   left: 800px;
+   bottom: 30px;
+   padding: 10px;
+   position: relative; 
+   border-radius: 5px;
+   -webkit-transition: all .5s ease;
+   -o-transition: all .5s ease;
+   transition: all .5s ease;
+  
+}
+
+.footer-link:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+
+

@@ -1,0 +1,219 @@
+@media  (max-width:1024px){
+
+.greeting {
+    padding: 100px 50px;
+}
+
+.home-content a {
+    display: none;
+}
+
+.soc-icons {
+    right: 0;
+    bottom: 25px;
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+}
+
+.soc-icons li a {
+    padding: 0 15px;
+}
+
+.left-education {
+    width: 350px;
+    margin-left: 0;
+    padding: 32px 32px;
+    margin-bottom: 10px;
+}
+
+.right-education {
+    width: 350px;
+    margin-left: 0;
+    padding: 32px 32px;
+}
+
+.border {
+    border-bottom: 1px solid rgb(12, 11, 11);
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.portfolio p.about-me-text {
+    display: inline-block;
+    box-shadow: none;
+    padding: 32px 32px;
+    text-align: center;
+}
+
+.about-info {
+    text-align: center;
+}
+
+.my-info {
+    text-align: center;
+}
+
+.img-portfolio {
+    border-radius: 10px;
+    width: 50%;
+}
+
+.about-me {
+/* padding: 56px 56px; */
+   box-shadow: none;
+   border-radius: 10px;
+/* display: inline-block; */
+/* vertical-align: top; */
+   position: relative;
+   left: 0;
+   top: 0;
+}
+
+.about-me-text {
+   margin-top: 20px;
+}
+
+.education {
+   justify-content: space-around;
+}
+
+
+@media (max-width:500px){
+
+header {
+    padding: 20px 30px;  
+    text-align: center;
+}
+
+header #toggle {
+    display: none;
+}
+
+.greeting {
+    padding: 100px 30px;
+    min-height: 0;
+}
+
+.home-content h1 {
+    font-size: 30px;
+}
+
+.home-content a {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.home-content{
+    margin-top: 100px;
+}
+
+.navigation {
+    width: 200px;
+}
+
+.greeting.active {
+    -webkit-transform:translateX(-200px) ;
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+    transform: translateX(-200px);
+}
+
+.my-info {
+    text-align: center;
+}
+
+.img-portfolio {
+    border-radius: 10px;
+    width: 50%;
+}
+
+.about-me {
+   position: relative;
+   padding: 2px 2px;
+   width: 100%;
+   box-shadow: none;
+   border-radius: 10px;
+   left: 0;
+   top: 0;
+}
+
+.about-me-text {
+   margin-top: 20px;
+}
+
+.portfolio-items img {
+  width: 100px;
+}
+
+.education {
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-education {
+    background-image: none;
+    background-color: rgb(223, 226, 199);
+}
+
+.left-education {
+    width: 350px;
+    margin-left: 0;
+    padding: 32px 32px;
+}
+
+.right-education {
+    width: 350px;
+    padding: 32px 32px;
+}
+
+.skills-education {
+    padding: 100px 30px;
+}
+
+.border {
+    border-bottom: 1px solid rgb(12, 11, 11);
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.portfolio p.about-me-text {
+    display: inline-block;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    padding: 32px 32px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    height: 300px;
+}
+
+.about-info, .skills-education, .portfolio,.certificates,.footer-blok {
+    padding: 20px;
+}
+
+.education .left-education p.about-me-text {
+    text-align: center;
+    color: rgb(0, 8, 0);
+}
+
+.education .right-education p.about-me-text {
+    text-align: center;
+    color: rgb(0, 8, 0);
+}
+
+.footer-link {
+    display: none;
+}
+}
+}
+
+
+
+
