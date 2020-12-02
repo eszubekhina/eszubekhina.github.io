@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>Ekaterina Zubekhina</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
-
 </head>
 
 <body>
 
     <!-- 1 блок Приветствие -->
     <section class="greeting">
+
         <div class="overlay"></div>
         <header>
-            <a href="" class="logo" id="home"><span>Добро пожаловать</span> на мой сайт-портфолио!</a>
+            <p href="" class="logo" id="home"><span>Добро пожаловать</span> на мой сайт-портфолио!</p>
             <div id="toggle" onclick="toggle()"></div>
             <!--<div id="toggle"></div> -->
         </header>
@@ -30,19 +30,22 @@
             </h1>
             <a href="#aboutme">Oбо мне</a>
         </div>
+
         <ul class="soc-icons">
             <li><a href="https://github.com/eszubekhina" target="_blank"><i class="fa fa-github"
                         aria-hidden="true"></i></a></li>
             <li><a href="https://web.telegram.org/#/im" target="_blank"><i class="fa fa-telegram"
                         aria-hidden="true"></i></a></li>
-            <li><a href="https://vk.com/zubekhinaes" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
+            <li><a href="https://vk.com/zubekhinaes" target="_blank"><i class="fa fa-lg fa-vk"
+                        aria-hidden="true"></i></a>
             </li>
             <li><a href="https://www.instagram.com/katerina_kudryash/" target="_blank"><i
                         class="fa fa-instagram"></i></a></li>
         </ul>
+
     </section>
 
-    <div id="navigation">
+    <nav id="navigation">
         <ul>
             <li><a href="#home">Главная</a></li>
             <li><a href="#aboutme">Обо мне</a></li>
@@ -51,7 +54,7 @@
             <li><a href="#certificatesme">Электронные сертификаты</a></li>
             <li><a href="#contactsme">Контакты</a></li>
         </ul>
-    </div>
+    </nav>
 
     <!-- 2 блок Обо мне -->
     <section class=" about-info">
@@ -60,19 +63,12 @@
             <div class="border"></div>
             <!--  <div class=" container about">-->
             <div class="my-info">
-                <img class="img-portfolio box-about-front" src="img/foto.jpg" alt="Моя фотография" width="100">
+                <img class="img-portfolio box-about-front" src="img/foto.jpg" alt="Моя фотография" width="300">
                 <div class="about-me">
-                    <p class="about-me-text">
-                        На данный момент я обучаюсь профессии frontend-разработчик на образовательном IT-портале -
-                        GeekBrains | GeekUniversity.
-                        Учусь верстать сайты и лендинги,
-                        писать скрипты на языке программирования JavaScript. Хочу найти работу или стажировку, чтобы
-                        дальше развиваться и узнавать что-то новое в этой области.
-                        Для меня создание сайтов - это волшебство! Я каждый день учусь и продолжаю стремиться стать в
-                        будущем
-                        отличным специалистом в мире разработки!
+                    <p id="about-me-text-blok">
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -89,15 +85,15 @@
                 мои самые первые работы. Но моё портфолио обязательно будет
                 пополняться новыми реализованными макетами! </p>
             <div class="portfolio-items">
-                <div class="portfolio-item"><a
+                <div class="portfolio-item-img"><a
                         href="https://htmlpreview.github.io/?https://github.com/eszubekhina/html5_css3_learning/blob/main/HomeWork_1_HTML_CSS/index.html"
                         target="_blank">
                         <img src="img_portfolio/homepage.png" alt="maket_1" height=500></a></div>
-                <div class="portfolio-item"><a
+                <div class="portfolio-item-img"><a
                         href="https://htmlpreview.github.io/?https://github.com/eszubekhina/html5_css3_learning/blob/main/HomeWork_1_HTML_CSS/contacts.html"
                         target="_blank">
                         <img src="img_portfolio/Contact_Us.png" alt="maket_2" height=500></a></div>
-                <div class="portfolio-item"><a
+                <div class="portfolio-item-img"><a
                         href="https://htmlpreview.github.io/?https://github.com/eszubekhina/html5_css3_learning/blob/main/HomeWork_3_WAXOM/index.html"
                         target="_blank"><img src="img_portfolio/Waxom.jpg" alt="maket_3" height=500></a>
                 </div>
@@ -113,8 +109,8 @@
             <div class="education">
                 <div class="left-education">
                     <h2 class="skill-title">Образование</h2>
-                    <p class="about-me-text">Я имею высшее экономическое образование. В апреле 2020 года закончила
-                        онлайн-курсы по тестирование ПО в школе Тестировщиков
+                    <p class="about-me-text">Высшее экономическое образование. В апреле 2020 года закончила
+                        онлайн-курсы по тестирование ПО в школе тестировщиков
                         <a class="link-site-learn" href="https://qatester.ru/" target="_blank">QATESTER</a>. В процессе
                         обучения поняла, что мне ближе и интереснее верстка сайтов! И я
                         решила, что хочу верстать! Мои знания, полученнные на
@@ -129,10 +125,12 @@
 
                     <p class="about-me-text"> За время своего обучения я успела познакомиться с некоторыми технологиями
                         необходимыми для того, чтобы начать верстать. И дальше продoлжаю изучать язык разметки HTML5,
-                        таблицы стилей CSS3, язык программирования JavaScript. В работе также использую фреймворк
-                        Bootstrap. С макетами работаю в Figma, Marcy, Avocode. Знакома с адаптивной версткой. </p>
-                    <p class="about-me-text"> Опыт работы с <a class="link-site-learn"
-                            href="https://github.com/eszubekhina" class="link-site" target="_blank">GIT</a> , JIRA, OS:
+                        таблицы стилей CSS3, язык программирования JavaScript. С макетами работаю в Figma, Marcy,
+                        Avocode.
+                        Знакома с адаптивной версткой, фреймворком Bootstrap, а также JavaScript-фреймворком Vue.js.</p>
+                    <p class="about-me-text"> Инструмент разработки: cистема контроля версий <a class="link-site-learn"
+                            href="https://github.com/eszubekhina" class="link-site" target="_blank">GIT</a> , инструмент
+                        управления проектами JIRA. OS:
                         Windows, Linux.</p>
                 </div>
             </div>
@@ -149,20 +147,68 @@
                     GeekUniversity</p>
             </div>
             <div class="certificates_gb">
-                <img class="portfolio-item" src="certificates/certificate_HTML_CSS.jpg" alt="Сертификат">
-                <img class="portfolio-item" src="certificates/certificate_JavaSсript_1.jpg" alt="Сертификат">
-                <img class="portfolio-item" src="certificates/test_HTML_CSS_1.jpg" alt="Сертификат">
-                <img class="portfolio-item" src="certificates/test_HTML_CSS_2.jpg" alt="Сертификат">
-                <img class="portfolio-item" src="certificates/certificate.jpg" alt="Сертификат">
+
+                <div class="certificates_gb_item">
+                    <img class="portfolio-item" src="certificates/certificate_HTML_CSS.jpg" height="150"
+                        alt="Сертификат">
+                    <div class="certificates_gb_item-text">
+                        <span>"HTML5 и CSS3"</span>
+                        <span>Курс</span>
+                    </div>
+                </div>
+
+                <div class="certificates_gb_item">
+                    <img class="portfolio-item" src="certificates/certificate_JavaSсript_1.jpg" height="150"
+                        alt="Сертификат">
+                    <div class="certificates_gb_item-text">
+                        <span>"JavaScript Уровень 1 "</span>
+                        <span>Курс</span>
+                    </div>
+                </div>
+                <div class="certificates_gb_item">
+                    <img class="portfolio-item" src="certificates/test_HTML_CSS_1.jpg" height="150" alt="Сертификат">
+                    <div class="certificates_gb_item-text">
+                        <span>"HTML5 и CSS3<br>Начальный уровень"</span>
+                        <span>Тестирование</span>
+                    </div>
+                </div>
+                <div class="certificates_gb_item">
+                    <img class="portfolio-item" src="certificates/test_HTML_CSS_2.jpg" height="150" alt="Сертификат">
+                    <div class="certificates_gb_item-text">
+                        <span>"HTML5 и CSS3<br>Средний уровень"</span>
+                        <span>Тестирование</span>
+                    </div>
+                </div>
+                <div class="certificates_gb_item">
+                    <img class="portfolio-item" src="certificates/certificate.jpg" height="150" alt="Сертификат">
+                    <div class="certificates_gb_item-text">
+                        <span>"HTML5 и CSS3"</span>
+                        <span>Интерактивный курс</span>
+                    </div>
+                </div>
+                <div class="certificates_gb_item">
+                    <img class="portfolio-item" src="certificates/certificate_programming.jpg" height="150"
+                        alt="Сертификат">
+                    <div class="certificates_gb_item-text">
+                        <span>"Основы программирования<wbr>Начальный уровень"</span>
+                        <span>Тестирование</span>
+                    </div>
+                </div>
             </div>
             <div class="certificates-text">
-                <p class="about-me-text">Сертификат о прохождении онлайн-курса по тестированию программного обеспечения
+                <p class="about-me-text">Сертификат о прохождении онлайн-курса по тестированию
+                    программного обеспечения
                 </p>
             </div>
             <div class="certificates_gb">
-                <img class="portfolio-item" src="certificates/testing.jpg" alt="Сертификат">
-            </div>
-        </div>
+                <div class="certificates_gb_item">
+                    <img class="portfolio-item" src="certificates/testing.jpg" height="150" alt="Сертификат">
+                    <div class="certificates_gb_item-text">
+                        <span>"Основы тестирования<wbr>программного обеспечения"</span>
+                        <span>Онлайн-курс</span>
+                    </div>
+                </div>
+
     </section>
 
     <!-- 6 блок Контакты -->
@@ -192,7 +238,7 @@
             </div>
             <p class="footer-text">&copy;2020 Сайт-портфолио</p>
         </div>
-        <a href="#home" class="footer-link">Главная</a>
+        <a href="#home" class="footer-link"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </footer>
     <script src="main.js"></script>
 

@@ -13,6 +13,8 @@
 
 body {
     position: relative;
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -76,6 +78,7 @@ header .logo {
     font-size:26px;
     font-weight: bold;
     text-decoration: none;
+    font-style: italic;
 }
 
 header #toggle {
@@ -169,6 +172,7 @@ header #toggle:after {
 .home-content h1 {
     color:#fff;
     font-size: 42px;
+    font-style: italic;
 }
 
 .home-content h1 span {
@@ -192,6 +196,7 @@ header #toggle:after {
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;
+    font-style: italic;
 }
 
 .home-content a:hover{
@@ -212,7 +217,7 @@ header #toggle:after {
 
 .soc-icons li a {
     display: inline-block;
-    padding: 15px 0;
+    padding: 18px 0;
     font-size: 20px;
     color: #fff;
     -webkit-transition: all .5s ease;
@@ -223,22 +228,55 @@ header #toggle:after {
 .soc-icons li a:hover {
     -webkit-transform: scale(1,4);
     -ms-transform: scale(1,4);
-    -o-transform: scale(2,4);
-    transform: scale(3,4);
+    -o-transform: scale(2,2);
+    transform: scale(2,2);
+}
+
+
+.fa {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-color: #444;
+    border: 2px solid #ccc;
+    padding-top: 6px;
+    border-radius: 22px;
+    font-size: 1.33333333em;
+  
+}
+
+.fa:hover {
+    color:rgb(26, 126, 44);
+    background-color: #fff;
+    border-radius: 22px;
 }
 
 /*2 блок Обо мне*/
 
+.my-info {
+    display: flex;
+    align-items: center;
+}
+
 .img-portfolio{
-    display: inline-block;
+    display: block;
     border-radius: 50px;
     width: 30%;
-    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease, -webkit-transform .25s ease, -webkit-box-shadow .25s ease;
+    transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+    transition-duration: 500ms;
+    will-change: transform, box-shadow;
+}
+
+.img-portfolio:hover{
+    transform: translateY(5px) translateZ(0);
+    box-shadow: 0 16px 32px 0 rgba(62, 57, 107, .28), 0 0 0 transparent;
 }
 
 .about-info {
-    padding: 40px 0;
-    background-color: rgb(246, 248, 243);
+    padding: 50px;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgb(223 242 233), rgb(232 238 207));
 }
 
 /*.box-about-back {
@@ -252,28 +290,25 @@ header #toggle:after {
     color: rgb(15, 102, 30);
     font-size: 32px;
     font-weight: bold;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
 .border {
-    width: 1000px;
-    border-bottom: 1px solid rgb(12, 11, 11);
-    margin: 0 auto 60px;
-    border-radius: 5px;
-    max-width: 90%;
+    width: 800px;
+    border-bottom: 1px solid rgb(39 113 42);
+    margin: 0 auto 40px;
+    /* border-radius: 5px; */
+    /* max-width: 90%; */
+    box-sizing: border-box;
 }
 
 .about-me {
-    width: 780px;
+    min-width: 780px;
     padding: 56px 56px;
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    left: 40px;
-    top: 90px;
+    margin-left: 40px;
 }
 
 .about-me-text {
@@ -282,23 +317,34 @@ header #toggle:after {
     font-weight: bold;
     text-align: justify;
     text-indent: 1.5em; 
+    font-style: italic;
+}
+
+#about-me-text-blok {
+    color: rgb(5, 65, 18);
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.6;
+    text-indent: 20px;
 }
 
 /*3 блок портфолио*/
 
 .portfolio {
-    background-color: rgb(224, 231, 214);
-    padding: 40px 0;
+    background-image: linear-gradient(rgb(221 236 213), rgb(238 234 226));
+    padding: 50px;
+    box-sizing: border-box;
 }
 
-.portfolio-item {
-    margin-right: 2vw;
-    margin-bottom: 2vw;
+.portfolio-item-img {
+    /*--margin-right: 2vw;
+    margin-bottom: 2vw;*/
     transition: all 0.9s ease;
 }
 
-.portfolio-item img {
+.certificates-item img {
     border-radius: 10px;
+   
 }
 
 /*.portfolio-item1 {
@@ -313,8 +359,12 @@ header #toggle:after {
     align-items: flex-end;
 }
 
-.portfolio-item:hover{
-    transform: scale(1.5);
+.portfolio-item-img img {
+    border-radius: 10px;
+}
+
+.portfolio-item-img:hover{
+    transform: scale(1.2);
 }
 
 /*4 блок Умение и навыки*/
@@ -323,26 +373,28 @@ header #toggle:after {
     background-image: url(img/nb3.jpg);
     background-repeat: no-repeat ;
     padding: 50px;
+    box-sizing: border-box;
     background-size: cover;   
 }
 
 .education {
     display: flex;
-    justify-content: space-between;
 }
 
 .left-education {
    display: block;
    width: 50%; 
    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
-   padding: 56px 56px;
+   padding: 56px;
+   box-sizing: border-box;
 }
 
 .right-education {
     display: block;
     width: 50%; 
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
-    padding: 56px 56px;  
+    padding: 56px; 
+    box-sizing: border-box; 
 }
 
 .skill-title {
@@ -364,29 +416,87 @@ p.about-me-text a {
 /*5 блок Сертификаты*/
 
 .certificates {
-    background-color: rgb(246, 248, 243);
-    padding: 40px 0;
+    background-image: linear-gradient(rgb(230 230 220), rgb(184 234 184));
+    padding: 50px;
+    box-sizing: border-box;
 }
 
 .certificates_gb {
+    margin: 0 auto 40px;
     margin-top: 30px;
-    margin-bottom: 30px;
     text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.certificates_gb img {
-    width: 30%;
+.certificates_gb_item{
+    background-color: #fbfaf8;
+    position: relative;
+    width: 350px;
+    cursor: pointer;
 }
+
+.certificates_gb_item img {
+    width: 100%;
+    height: 100%;
+}
+
+/*.certificates_gb_item-imfo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0, .2);
+display: none;
+}*/
+
+/*.certificates_gb_item:hover .certificates_gb_item-imfo{
+    display: block
+  }*/
+  
 
 .certificates-text p {
     text-align: center;
 }
 
+.certificates_gb_item-text {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 100%;
+    background: #fbfaf8;
+    opacity: 0;
+    transition: bottom .2s, opacity .4s;
+    border-radius: 4px;
+    vertical-align: center;
+}
+
+.certificates_gb_item:hover .certificates_gb_item-text {
+    background-color: #b4dbe2;
+    opacity: .9;
+    bottom: 0;
+    transition: bottom .2s, opacity .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+.certificates_gb_item-text span {
+    display: block;
+    font-size: 19px;
+    color: rgb(31, 94, 38);
+    font-weight: bold;
+}
+
 /*6 блок Контакты footer*/
 
 .footer-blok {
-    background-color: rgb(135, 165, 80);
+    background-image: linear-gradient(rgb(166 220 168), rgb(144, 153, 66));
     text-align: center;  
+    padding: 50px 50px 0 50px;
+    box-sizing: border-box;
 }
 
 .soc-icons-footer li {
@@ -406,24 +516,27 @@ p.about-me-text a {
 }
 
 .soc-icons-footer li a:hover {
-    -webkit-transform: scale(1,4);
-    -ms-transform: scale(1,4);
-    -o-transform: scale(2,4);
-    transform: scale(3,4);
+    -webkit-transform: scale(2,2);
+    -ms-transform: scale(2,2);
+    -o-transform: scale(2,2);
+    transform: scale(2,2);
 }
-
 
 .footer-text {
     color: #fff;
     font-size: 20px;
     font-weight: bold; 
-    padding-top: 35px;  
-    padding-bottom: 25px;
 }
 
 .footer-contacts {
     color: rgb(239, 241, 233);
     font-weight: bold;
+    margin: 45px 0 45px 0;
+    box-sizing: border-box;
+}
+
+.footer-contacts .contact-mail {
+    margin: 0 0 10px 0;
 }
 
 .footer-contacts  .contact-mail, .contact-phone,
@@ -433,28 +546,16 @@ p.about-me-text a {
 
 .footer-link {
    display: inline-block;
-   border: 2px solid #fff;
    color: #fff;
-   font-weight: bold;
-   text-decoration: none;
-   text-transform: uppercase;
    margin-top: 25px;
    padding: 15px 30px;
    left: 800px;
    bottom: 30px;
    padding: 10px;
    position: relative; 
-   border-radius: 5px;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-  
 }
 
-.footer-link:hover{
-    background-color: #fff;
-    color: #000;
-}
+
 
 
 
